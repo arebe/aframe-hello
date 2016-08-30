@@ -7,12 +7,34 @@
     <script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
-      <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
-      <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere>
-      <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
-      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
-      <a-sky color="#ECECEC"></a-sky>
+    <a-scene fog="type: exponential; color: #fff">
+    
+    <a-entity light="color: #AFA; intensity: 1.5" position="-1 1 0"></a-entity>
+    <a-entity light="color: #f88; intensity: 2" position="1 1 0">
+      
+    </a-entity>
+
+      <a-box position="-4 0.5 -3" rotation="0 45 0" color="#2CffD9">
+        
+        <a-animation attribute="rotation" repeat="indefinite" to="0 360 0"></a-animation>
+      </a-box>
+      <!-- <a-sphere position="0 1.25 -5" radius="1.25" color="#EF2D5E"></a-sphere> -->
+      
+      <a-torus position="1 0.75 -3" radius="0.5" height="1.5"  src="assets/textures/free_space_galaxy_texture_by_lyshastra-d77gofi.png">
+        <a-animation  attribute="rotation" begin="click" repeat="indefinite" to="45 180 360"></a-animation>
+      </a-torus>
+
+      <a-sphere position="0.5 1.25 -50" radius="10"  src="assets/textures/53aa27b12c211f6653ec46218b50289d.jpg"></a-sphere>
+
+      <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#300"></a-plane>
+<a-curvedimage src="assets/textures/i4669997206.jpg" height="3.0" radius="5.7" theta-length="72"
+                 rotation="0 100 0" scale="0.8 0.8 0.8"></a-curved-image>
+      <a-sky color="#0303ff"></a-sky>
+
+        <a-camera position="0 1.8 0">
+    <a-cursor color="#ffee00">
+  </a-camera>
+
     </a-scene>
   </body>
 </html>
